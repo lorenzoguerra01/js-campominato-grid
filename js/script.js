@@ -12,13 +12,36 @@
 let elBtnPlay = document.getElementById("btn-play")
 
 elBtnPlay.addEventListener("click", function () {
-    let numBox = 100;
-    let tmpHtml = '';
-
-    for (let i = 0; i < numBox; i++) {
-        tmpHtml += ` <div class="ms_box">${i + 1}</div>`;
-        console.log(tmpHtml);
-    }
+    let acc = '';
+    let sel = document.getElementById("sel").value
     let msContainer = document.querySelector(".ms_container");
-    msContainer.innerHTML = tmpHtml;
+
+    console.log(sel);
+    if (sel === "easy") {
+        for (let i = 0; i < 100; i++) {
+            acc += ` <div class="ms_box ms_box-easy">${i + 1}</div>`;
+            console.log(acc);
+        }
+    } else if (sel === "normal") {
+        for (let i = 0; i < 81; i++) {
+            acc += ` <div class="ms_box ms_box-normal">${i + 1}</div>`;
+            console.log(acc);
+        }
+    } else if (sel === "hard") {
+        for (let i = 0; i < 49; i++) {
+            acc += ` <div class="ms_box ms_box-hard">${i + 1}</div>`;
+            console.log(acc);
+        }
+    } else {
+        msContainer.innerHTML = ` <div class="text-danger">Selezionare una difficoltà</div>`;
+    }
+
+    msContainer.innerHTML = acc;
+    let boxes = document.querySelectorAll(".ms_box")
+    boxes.forEach(function (box) {
+        box.addEventListener("click", function () {
+            this.classList.toggle("bg-primary")
+        })
+    })
 })
+

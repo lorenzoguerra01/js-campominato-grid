@@ -68,13 +68,21 @@ footer {
     flex-wrap: wrap;
 }
 .ms_box {
-    width: calc(100% / 10);
     aspect-ratio: 1 / 1;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+.ms_box-easy {
+    width: calc(100% / 10);
+}
+.ms_box-normal {
+    width: calc(100% / 9);
+}
+.ms_box-hard {
+    width: calc(100% / 7);
 }
 
 /* flex utility  */
