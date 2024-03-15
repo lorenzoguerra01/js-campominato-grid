@@ -1,0 +1,65 @@
+/* *****RESET***** */
+:root {
+    --color-main: #7fffd4; 
+}
+.ms_debug {
+    border: 1px solid red;
+}
+/* *****GENERAL***** */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    /* font-family: "Nome del Font", sans-serif;  */
+}
+a {
+    color: var(--color-);
+    text-decoration: none;
+}
+h1 {
+    font-weight: bold !important;
+}
+/* font awsome{
+    content: "\";
+    font-family: 'Font Awesome\ 6 Free';
+    font-weight: 900;
+} */
+
+/* *******BODY*******  */
+/* header  */
+header {
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* main  */
+
+/* footer  */
+footer {
+    height: 10%;
+}
+
+/* *******UTILITIES*******  */
+/* utility  */
+.ms_btn {
+    display: inline-block;
+    padding: 6px 12px;
+}
+.ms_screen {
+    height: 100vh;
+    background-color:white;
+}
+.ms_card {
+    height: 75% !important;
+    width: 100%;
+    overflow: auto;
+    background-color: var(--color-main);
+}
+
+/* flex utility  */
+/* media query  */
+/* @media screen and (max-width: 1200px) {}   */
+/* @media screen and (max-width: 992px) {}  */
+/* @media screen and (max-width: 768px) {}  */
+/* @media screen and (max-width: 576px) {}  */
