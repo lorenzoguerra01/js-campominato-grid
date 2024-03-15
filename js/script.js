@@ -15,25 +15,22 @@ elBtnPlay.addEventListener("click", function () {
     let acc = '';
     let sel = document.getElementById("sel").value
     let msContainer = document.querySelector(".ms_container");
-
+    msContainer.classList.add("border", "border-black")
     console.log(sel);
     if (sel === "easy") {
         for (let i = 0; i < 100; i++) {
             acc += ` <div class="ms_box ms_box-easy">${i + 1}</div>`;
-            console.log(acc);
         }
     } else if (sel === "normal") {
         for (let i = 0; i < 81; i++) {
             acc += ` <div class="ms_box ms_box-normal">${i + 1}</div>`;
-            console.log(acc);
         }
     } else if (sel === "hard") {
         for (let i = 0; i < 49; i++) {
             acc += ` <div class="ms_box ms_box-hard">${i + 1}</div>`;
-            console.log(acc);
         }
     } else {
-        msContainer.innerHTML = ` <div class="text-danger">Selezionare una difficoltà</div>`;
+        acc = `<div class="text-danger">Selezionare una difficoltà</div>`;
     }
 
     msContainer.innerHTML = acc;
@@ -41,6 +38,7 @@ elBtnPlay.addEventListener("click", function () {
     boxes.forEach(function (box) {
         box.addEventListener("click", function () {
             this.classList.toggle("bg-primary")
+            console.log(this.innerHTML);
         })
     })
 })
