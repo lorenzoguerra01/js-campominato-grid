@@ -55,6 +55,26 @@ footer {
     width: 100%;
     overflow: auto;
     background-color: var(--color-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ms_container {
+    width: 35%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.ms_box {
+    width: calc(100% / 10);
+    aspect-ratio: 1 / 1;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /* flex utility  */

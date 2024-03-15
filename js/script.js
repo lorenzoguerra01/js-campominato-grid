@@ -11,6 +11,14 @@
 
 let elBtnPlay = document.getElementById("btn-play")
 
-elBtnPlay.addEventListener("click", function() {
-    
+elBtnPlay.addEventListener("click", function () {
+    let numBox = 100;
+    let tmpHtml = '';
+
+    for (let i = 0; i < numBox; i++) {
+        tmpHtml += ` <div class="ms_box">${i + 1}</div>`;
+        console.log(tmpHtml);
+    }
+    let msContainer = document.querySelector(".ms_container");
+    msContainer.innerHTML = tmpHtml;
 })
